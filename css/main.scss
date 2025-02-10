@@ -53,6 +53,17 @@ a{
   transition: all 0.3s ease;
 
 }
+.icon-btn-arrow.black{
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none"><path d="M0.5 14L13.5 1M13.5 1V14M13.5 1H0.5" stroke="%23100F0D"/></svg>');
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.3s ease;
+
+}
 
 h1{
   font-weight: 300;
@@ -81,6 +92,49 @@ h1{
   }
 }
 
+.contact__item-comp{
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 185px;
+  margin-left: auto;
+  .contact__list{
+    padding-left: 0;
+    list-style: none;
+  }
+  .contact__list-item{
+    width: 100%;
+    transition: 0.3s ease;
+    position: relative;
+    &.hover-arrow{
+      border-bottom: solid 1px transparent;
+      padding-right: 20px;
+      &:hover{
+        border-color: var(--black);
+        .icon{
+          opacity: 1;
+        }
+      }
+    }
+    a{
+      padding-top: 12.5px;
+      padding-bottom: 11.5px;
+      width: 100%;
+      display: inline-block;
+      &:hover{
+        color: var(--black);
+      }
+    }
+    .icon{
+      margin-left: auto;
+      opacity: 0;
+      position: absolute;
+      bottom: 17px;
+      right: 0;
+      transition: 0.3s ease;
+    }
+  }
+}
+
 @media (min-width: 1440px) {
   ._content{
     display: flex;
@@ -92,6 +146,13 @@ h1{
 }
 .header{
   width: 100%;
+  .logo{
+    max-width: 148px;
+    margin-left: -11px;
+    img{
+      max-width: 100%;
+    }
+  }
   .header__wrap{
     border-bottom: solid 1px rgba(228, 229, 229, 1);
     display: flex;
@@ -138,7 +199,7 @@ h1{
   }
 }
 
-// стили главной страницы 
+// СТИЛИ ГЛАВНОЙ СТРАНИЦЫ
 .sc-main {
   padding-top: 57px;
   align-self: flex-start;
@@ -146,6 +207,57 @@ h1{
     max-width: 794px;
     .primary-btn{
       margin-top: 12px;
+    }
+  }
+}
+.footer-main{
+  width: 100%;
+  align-self: flex-end;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .swiper__item{
+    padding-top: 33px;
+  }
+  .swiperServices{
+    width: 100%;
+    max-width: 942px;
+    margin-left: 0;
+    cursor: grab;
+    .swiper-pagination{
+      position: relative;
+      height: 2px;
+      text-align: left;
+      display: flex;
+      top: 0;
+      bottom: 0;
+      margin-bottom: 24px;
+      background-color: rgba(228, 229, 229, 1);
+      &.swiper-pagination-lock{
+        display: none;
+      }
+    }
+    .swiper-pagination-bullet{
+      height: 2px;
+      border-radius: 0px;
+      background: none;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      transition: 0.3s ease;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: var(--black);
+    }
+  }
+  .service__info-item{
+    max-width: 314px;
+    padding-right: 24px;
+    display: inline-block;
+    width: 100%;
+    h4{
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: var(--black);
     }
   }
 }

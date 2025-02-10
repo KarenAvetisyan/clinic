@@ -8,6 +8,7 @@
     <meta name="keywords" content="Put your description here.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <!-- <link fetchpriority="high" rel="preload" href="img/banner-bg.webp" as="image"> -->
 </head>
@@ -46,7 +47,63 @@
             </section>
             <!-- футер гланвной страницы   -->
             <div class="footer-main">
-
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="swiper__item">
+                                <div class="swiper swiperServices">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="service__info-item">
+                                                <h4>Безопасность</h4>
+                                                <p>Включена в Реестр российского ПО Разработана под
+                                                РФ с хранением персональных данных 152-ФЗ Права
+                                                доступа One line more, one line more,
+                                                one line more, one line more</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="service__info-item">
+                                                <h4>Особенности</h4>
+                                                <p>Миграции из других ситстем. Классификаторы
+                                                по номенклатуре медицинских услуг 
+                                                Министерства здравоохранения.
+                                                Интегрирована с ЕГИСЗ.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="service__info-item">
+                                                <h4>Архитектура</h4>
+                                                <p>Облачная онлайн система с доступом
+                                                через интернет из любого устройства.
+                                                Поддержка сети клиник. Взаимодействие с
+                                                бухгалтерией, юристами,
+                                                поставщиками, лабораториями</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="service__info-item">
+                                                <h4>ПРИМЕР ЕСЛИ БОЛЬШЕ 3 СЛАЙДОВ В ДЕСКТОПЕ</h4>
+                                                <p>ПОЯВЛЯЕТСЯ ЛИНИЯ ПАГИНАЦИИ НА ВЕРХУ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="contact__item-comp">
+                                <ul class="contact__list">
+                                    <li class="contact__list-item hover-arrow"><a href="#">Telegram <i class="icon icon-btn-arrow black"></i></a></li><!--при навидении есть стрелка (класс - hover-arrow)-->
+                                    <li class="contact__list-item hover-arrow"><a href="#">WhatsApp <i class="icon icon-btn-arrow black"></i></a></li><!--при навидении есть стрелка (класс - hover-arrow)-->
+                                    <li class="contact__list-item"><a href="#">admin@clinicup.ru</a></li>
+                                    <li class="contact__list-item"><a href="#">+7 (499) 911-00-03</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -56,8 +113,16 @@
         </footer>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        var swiper = new Swiper(".swiperServices", {
+        slidesPerView: 3,
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
 </body>
 </html>
 
