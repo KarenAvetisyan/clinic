@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function(){
         const onscroll = (el, listener) => {
         el.addEventListener('scroll', listener)
         }
-
         
         // бургер 
         var burger = select('.js-burger')
@@ -54,6 +53,33 @@ document.addEventListener('DOMContentLoaded', function(){
         window.addEventListener('load', headerScrolled)
         onscroll(window, headerScrolled)
         }
+        // слайдер в первом блоке 
+        var swiperServices = select('.swiperServices');
+        if(swiperServices){
+                new Swiper(swiperServices, {
+                slidesPerView: 'auto',
+                autoplay: true,
+                autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                },
+                pagination: {
+                        el: ".swiper-pagination",
+                },
+                breakpoints: {
+                        768: {
+                        slidesPerView: 2,
+                },
+                1024: {
+                        slidesPerView: 3,
+                },
+                1200: {
+                        slidesPerView: 3,
+                },
+                },
+        });
+        }
+       
         // // якоря 
         // on('click', '.scrollTo', function(e) {
         //         if (select(this.hash)) {
