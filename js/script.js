@@ -23,6 +23,24 @@ document.addEventListener('DOMContentLoaded', function(){
         const onscroll = (el, listener) => {
         el.addEventListener('scroll', listener)
         }
+
+        
+        // бургер 
+        var burger = select('.js-burger')
+        var nav = select('.nav');
+        document.addEventListener('click', e => {
+        if(!e.target.matches('.burger')){}
+                else{
+                        burger.classList.toggle('clicked');
+                        nav.classList.toggle('show');
+                }
+                if(!e.target.matches('.nav__link')){}
+                else {
+                        e.preventDefault();
+                        burger.classList.remove('clicked');
+                        nav.classList.remove('show');
+                }
+        })
         // хедер при при скролле 
         let selectHeader = select('.header')
         if (selectHeader) {
