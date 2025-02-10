@@ -1,0 +1,151 @@
+/* Jost-Regular */
+@font-face {
+    font-family: "Jost";
+    src: url("../font/Jost-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+/* Jost-Regular */
+@font-face {
+    font-family: "Jost";
+    src: url("../font/Jost-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root{
+  --bg-color: #F9FAFA;
+  --black_light: rgba(16, 15, 13, 0.7);
+  --black: #100F0D;
+  --blue: #709ED4;
+  --red: #EE4F4F;
+}
+
+html  {
+    font-family: "Jost", sans-serif;
+    line-height:  1.15;
+    -webkit-text-size-adjust:  100%;
+    -webkit-tap-highlight-color:  transparent;
+    font-weight: 300;
+}
+
+body  {
+    margin: 0;
+    background-color: var(--bg-color);
+    font-size: 16px;
+    color: var(--black_light);
+}
+
+a{
+  text-decoration: none;
+  color: var(--black_light);
+  transition: all 0.3s ease;
+}
+
+.icon-btn-arrow{
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none"><path d="M1 11.5L11 1.5M11 1.5V11.5M11 1.5H1" stroke="white" stroke-width="1.5"/></svg>');
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.3s ease;
+
+}
+
+h1{
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 106%;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 28px;
+}
+
+.primary-btn{
+  display: inline-block;
+  text-align: center;
+  background-color: var(--blue);
+  border-radius: 4px;
+  user-select: none;
+  padding: 15.3px 34px 15.3px 34px;
+  color: #fff;
+  .icon{
+    margin-left: 12px;
+  }
+  &:hover{
+    .icon{
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  ._content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 100px);
+  }
+}
+.header{
+  width: 100%;
+  .header__wrap{
+    border-bottom: solid 1px rgba(228, 229, 229, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+  }
+  .nav__list{
+    list-style: none;
+    display: flex;
+    height: 99px;
+    margin-left: auto;
+    padding-left: 0;
+    margin-bottom: 0;
+    height: var(--var-height);
+    li{
+      margin-left: 16.5px;
+      height: 100%;
+      height: 99px;
+      transition: all 0.3s ease;
+      &:hover{
+        background-color: #FFFFFF;
+      }
+    }
+    a{
+      padding: 16.5px 16.5px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  .nav__item{
+    &.active{
+      background-color: #FFFFFF;
+      pointer-events: none;
+      font-weight: 400;
+      a{
+        color: var(--black);
+      }
+    }
+  }
+}
+
+// стили главной страницы 
+.sc-main {
+  padding-top: 57px;
+  align-self: flex-start;
+  .main__info{
+    max-width: 794px;
+    .primary-btn{
+      margin-top: 12px;
+    }
+  }
+}
