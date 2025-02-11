@@ -79,34 +79,68 @@ document.addEventListener('DOMContentLoaded', function(){
                 },
         });
         }
-       
-        // // якоря 
-        // on('click', '.scrollTo', function(e) {
-        //         if (select(this.hash)) {
-        //                 e.preventDefault();
-        //                 const href = e.target.getAttribute("href");
-        //                 const offsetTop = select(href).offsetTop - 70;
-                
-        //                 scroll({
-        //                         top: offsetTop,
-        //                         behavior: "smooth"
-        //                 });
-        //         }
-        // }, true)
-        
-        // // бургер
-        // on('click', '.js-burger', function(e){
-        //         select('.js-burger').classList.toggle('clicked');
-        //         select('nav').classList.toggle('show');
-        //         select('.nav__overlay').classList.toggle('show');
-        // })
-        // on('click', '.nav__overlay, .nav__link',  function(e){
-        //         e.preventDefault();
-        //         select('.js-burger').classList.remove('clicked');
-        //         select('nav').classList.remove('show');
-        //         select('.nav__overlay').classList.remove('show');
-        // }, true)
-
+        // слайдер графики
+        var swiperGraphics = document.querySelector('.swiperGraphics');
+        if(swiperGraphics){
+                var swiper = new Swiper(swiperGraphics, {
+                        loop: true,
+                        speed: 1000,
+                }); 
+                const paginationBullets = swiperGraphics.querySelectorAll('.swiper-pagination-tab');
+                if(paginationBullets){
+                        paginationBullets.forEach((bullet) => {
+                                bullet.addEventListener('click', function() {
+                                        const slideIndex = parseInt(bullet.getAttribute('data-slide'));
+                                        swiper.slideTo(slideIndex);
+                                });
+                        });
+                }
+                swiper.on('slideChange', function() {
+                        const currentIndex = swiper.realIndex;
+                        paginationBullets.forEach((bullet, index) => {
+                          if (index === currentIndex) {
+                            bullet.classList.add('active');
+                          } else {
+                            bullet.classList.remove('active');
+                          }
+                        });
+                });
+        }
+        // якоря 
+        const header = select('.header');
+        on('click', '.scrollTo', function(e) {
+        if (select(this.hash)) {
+                e.preventDefault();
+                const href = e.target.getAttribute("href");
+                if(header){
+                        var offsetTop = select(href).offsetTop - header.offsetHeight;
+                }
+                else {
+                        var offsetTop = select(href).offsetTop - header.offsetHeight;
+                }
+                scroll({
+                        top: offsetTop,
+                        behavior: "smooth"
+                });
+        }
+        }, true)
+        //  активный пункт меню при скролее
+        let navbarlinks = select('.scrollTo', true)
+        const navbarlinksActive = () => {
+        let position = window.scrollY + 200
+        navbarlinks.forEach(navbarlink => {
+        if (!navbarlink.hash) return
+        let section = select(navbarlink.hash)
+        if (!section) return
+        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+                navbarlink.classList.add('active')
+        } else {
+                navbarlink.classList.remove('active')
+        }
+        })
+        }
+        window.addEventListener('load', navbarlinksActive)
+        onscroll(document, navbarlinksActive)
 
         // // observer, анимация на скролле 
         // const inViewport = (element, observer) => {
@@ -131,3 +165,4 @@ document.addEventListener('DOMContentLoaded', function(){
         // });
 
 })
+
