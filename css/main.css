@@ -469,13 +469,13 @@ a {
     max-width: 327px;
   }
 }
-.sc-graphics .swiper-pagination-tab-wrapper {
+.sc-possibilities .swiper-pagination-tab-wrapper {
   display: flex;
   position: relative;
   border-top: solid 1px rgb(228, 229, 229);
   overflow: auto;
 }
-.sc-graphics .swiper-pagination-tab {
+.sc-possibilities .swiper-pagination-tab {
   display: inline-block;
   margin-right: 25px;
   cursor: pointer;
@@ -486,7 +486,7 @@ a {
   position: relative;
   z-index: 1;
 }
-.sc-graphics .swiper-pagination-tab:before {
+.sc-possibilities .swiper-pagination-tab:before {
   content: "";
   position: absolute;
   top: 0px;
@@ -497,28 +497,28 @@ a {
   transition: 0.3s ease-in-out;
   z-index: 1;
 }
-.sc-graphics .swiper-pagination-tab.active {
+.sc-possibilities .swiper-pagination-tab.active {
   font-weight: 400;
 }
-.sc-graphics .swiper-pagination-tab.active:before {
+.sc-possibilities .swiper-pagination-tab.active:before {
   width: 100%;
 }
-.sc-graphics .swiperGraphics .swiper-slide {
+.sc-possibilities .swiperGraphics .swiper-slide {
   height: auto;
   cursor: grab;
   padding-top: 63px;
   padding-bottom: 60px;
 }
-.sc-graphics .custom__info-wrap {
+.sc-possibilities .custom__info-wrap {
   max-width: 440px;
 }
-.sc-graphics .graphic__container {
+.sc-possibilities .graphic__container {
   display: inline-block;
   width: 100%;
   padding-right: 25px;
   position: relative;
 }
-.sc-graphics .graphic__container:before {
+.sc-possibilities .graphic__container:before {
   content: "";
   position: absolute;
   top: 0;
@@ -533,7 +533,7 @@ a {
   border-radius: 4px;
   z-index: -1;
 }
-.sc-graphics .graphic__bar-details {
+.sc-possibilities .graphic__bar-details {
   margin-left: auto;
   width: -moz-fit-content;
   width: fit-content;
@@ -546,22 +546,22 @@ a {
   margin-bottom: 32px;
   margin-top: -36px;
 }
-.sc-graphics .graphic__bar-item {
+.sc-possibilities .graphic__bar-item {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
 }
-.sc-graphics .graphic__bar-item:last-of-type {
+.sc-possibilities .graphic__bar-item:last-of-type {
   margin-bottom: 0;
 }
-.sc-graphics .graphic__bar-item span {
+.sc-possibilities .graphic__bar-item span {
   width: 19px;
   height: 19px;
   display: inline-block;
   margin-right: 8px;
   border-radius: 1px;
 }
-.sc-graphics .graphic__map {
+.sc-possibilities .graphic__map {
   max-width: 543px;
   width: 100%;
   display: block;
@@ -573,15 +573,15 @@ a {
   border-radius: 6px;
   margin-bottom: 35px;
 }
-.sc-graphics .graphic__img {
+.sc-possibilities .graphic__img {
   padding: 50px 50px;
 }
-.sc-graphics .graphic__img img {
+.sc-possibilities .graphic__img img {
   max-width: 100%;
   width: auto;
   height: auto;
 }
-.sc-graphics .graphic__map-btns {
+.sc-possibilities .graphic__map-btns {
   list-style: none;
   padding-left: 0;
   margin-left: auto;
@@ -598,113 +598,121 @@ a {
   padding: 7px 6px;
   font-size: 14px;
 }
-.sc-graphics .graphic__map-btns a {
+.sc-possibilities .graphic__map-btns a {
   padding: 11px 32px;
   border-radius: 2px;
   display: inline-block;
   color: var(--black);
 }
-.sc-graphics .graphic__map-btns a.active {
+.sc-possibilities .graphic__map-btns a.active {
   background: #DEDFDF;
   font-weight: 400;
 }
-.sc-graphics .graphic__map-btns a:hover:not(.active) {
+.sc-possibilities .graphic__map-btns a:hover:not(.active) {
   background: rgba(222, 223, 223, 0.367);
 }
 
 @media (max-width: 1200px) {
-  .sc-graphics .swiperGraphics .swiper-slide {
+  .sc-possibilities .swiperGraphics .swiper-slide {
     padding-top: 35px;
     padding-bottom: 35px;
   }
-  .sc-graphics .graphic__container:before {
+  .sc-possibilities .graphic__container:before {
     max-width: 81%;
   }
-  .sc-graphics .graphic__map-btns {
+  .sc-possibilities .graphic__map-btns {
     margin-right: 0;
   }
 }
 @media (max-width: 992px) {
-  .sc-graphics .swiper-pagination-tab-wrapper {
+  .sc-possibilities .swiper-pagination-tab-wrapper {
     width: calc(100% + 64px);
     margin-left: -32px;
     padding-left: 32px;
     border-top: none;
     /* For Firefox */
   }
-  .sc-graphics .swiper-pagination-tab-wrapper::-webkit-scrollbar {
+  .sc-possibilities .swiper-pagination-tab-wrapper::-webkit-scrollbar {
     display: none; /* Hides the scrollbar */
   }
-  .sc-graphics .swiper-pagination-tab-wrapper {
+  .sc-possibilities .swiper-pagination-tab-wrapper {
     scrollbar-width: none; /* Hides the scrollbar */
   }
-  .sc-graphics .graphic__map-btns {
+  .sc-possibilities .graphic__map-btns {
     font-size: 12px;
   }
-  .sc-graphics .graphic__map-btns a {
+  .sc-possibilities .graphic__map-btns a {
     padding: 11px 13px;
   }
 }
 @media (max-width: 767px) {
-  .sc-graphics {
+  .sc-possibilities {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  .sc-graphics .graphic__container {
+  .sc-possibilities .graphic__container {
     padding-right: 47px;
     padding-left: 34px;
     margin-bottom: 34px;
   }
-  .sc-graphics .graphic__container:before {
+  .sc-possibilities .graphic__container:before {
     right: 11px;
     width: calc(100% - 85px);
   }
-  .sc-graphics .graphic__bar-details {
+  .sc-possibilities .graphic__bar-details {
     margin-right: -20px;
   }
-  .sc-graphics .graphic__map-btns {
+  .sc-possibilities .graphic__map-btns {
     margin-right: -20px;
   }
-  .sc-graphics .graphic__map {
+  .sc-possibilities .graphic__map {
     margin-right: 0;
     margin-left: 0;
   }
-  .sc-graphics .graphic__img {
+  .sc-possibilities .graphic__img {
     padding: 24px 24px;
   }
-  .sc-graphics .graphic__bar-details {
+  .sc-possibilities .graphic__bar-details {
     margin-top: -17px;
     font-size: 12px;
     min-width: 60px;
     padding: 7px 7px;
     margin-bottom: 23px;
   }
-  .sc-graphics .graphic__bar-item {
+  .sc-possibilities .graphic__bar-item {
     margin-bottom: 6px;
   }
-  .sc-graphics .graphic__bar-item span {
+  .sc-possibilities .graphic__bar-item span {
     width: 9px;
     height: 9px;
     margin-right: 4.5px;
   }
 }
 @media (max-width: 576px) {
-  .sc-graphics .swiper-pagination-tab-wrapper {
+  .sc-possibilities .swiper-pagination-tab-wrapper {
     width: calc(100% + 40px);
     margin-left: -20px;
     padding-left: 20px;
   }
-  .sc-graphics .graphic__container:before {
+  .sc-possibilities .graphic__container:before {
     height: calc(100% - 13px);
   }
-  .sc-graphics .graphic__map {
+  .sc-possibilities .graphic__map {
     margin-bottom: 16px;
   }
-  .sc-graphics .graphic__map-btns {
+  .sc-possibilities .graphic__map-btns {
     font-size: 9px;
     padding: 3px 3px;
   }
-  .sc-graphics .graphic__map-btns a {
+  .sc-possibilities .graphic__map-btns a {
     padding: 5px 10px;
   }
+}
+.sc-possibilities-2 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.sc-possibilities-2 .custom__info-wrap {
+  max-width: 632px;
 }/*# sourceMappingURL=main.css.map */

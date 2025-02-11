@@ -518,9 +518,8 @@ a{
   }
 }
 
-
 // ФРЕЙМ 2 
-.sc-graphics{
+.sc-possibilities{
   .swiper-pagination-tab-wrapper {
     display: flex;
     position: relative;
@@ -666,7 +665,7 @@ a{
   }
 }
 @media (max-width: 1200px) {
-  .sc-graphics{
+  .sc-possibilities{
     .swiperGraphics {
       .swiper-slide{
         padding-top: 35px;
@@ -682,7 +681,7 @@ a{
   }
 }
 @media (max-width: 992px) {
-  .sc-graphics{
+  .sc-possibilities{
     .swiper-pagination-tab-wrapper{
       width: calc(100% + 64px);
       margin-left: -32px;
@@ -706,7 +705,7 @@ a{
   }
 }
 @media (max-width: 767px) {
-  .sc-graphics{
+  .sc-possibilities{
     padding-top: 40px;
     padding-bottom: 40px;
     .graphic__container{
@@ -750,7 +749,7 @@ a{
   }
 }
 @media (max-width: 576px) {
-  .sc-graphics{
+  .sc-possibilities{
     .swiper-pagination-tab-wrapper{
       width: calc(100% + 40px);
       margin-left: -20px;
@@ -770,4 +769,13 @@ a{
       }
     }
   }
+}
+
+.sc-possibilities-2{
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+    .custom__info-wrap{
+      max-width: 632px;
+    }
 }
