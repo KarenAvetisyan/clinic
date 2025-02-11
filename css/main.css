@@ -62,9 +62,13 @@ a {
   flex-wrap: wrap;
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 80px);
 }
 
+@media (min-width: 768px) {
+  .frame {
+    min-height: calc(100vh - 80px);
+  }
+}
 .frame-bg {
   position: absolute;
   top: 0px;
@@ -310,7 +314,7 @@ a {
     top: -81px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .frame-1-bg {
     background-size: 161%;
   }
@@ -423,14 +427,14 @@ a {
 }
 
 @media (max-width: 1199px) {
-  .sc-main-bottom {
-    padding-bottom: 12px;
-  }
   .sc-main-bottom .contact__item-comp {
     margin-left: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .sc-main-bottom {
+    padding-bottom: 40px;
+  }
   .sc-main-bottom .swiperServices {
     width: calc(100% + 64px);
     margin-left: -32px;
@@ -469,6 +473,7 @@ a {
   display: flex;
   position: relative;
   border-top: solid 1px rgb(228, 229, 229);
+  overflow: auto;
 }
 .sc-graphics .swiper-pagination-tab {
   display: inline-block;
@@ -479,16 +484,18 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
+  z-index: 1;
 }
 .sc-graphics .swiper-pagination-tab:before {
   content: "";
   position: absolute;
-  top: -1px;
+  top: 0px;
   left: 0;
   width: 0;
   height: 1px;
   background-color: var(--black);
   transition: 0.3s ease-in-out;
+  z-index: 1;
 }
 .sc-graphics .swiper-pagination-tab.active {
   font-weight: 400;
@@ -557,17 +564,17 @@ a {
 .sc-graphics .graphic__map {
   max-width: 543px;
   width: 100%;
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: 51px;
-  align-items: center;
-  justify-content: center;
   background: #FFFFFF;
   border: 1px solid rgba(16, 15, 13, 0.09);
   box-shadow: -24px 24px 48px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
-  height: 423px;
   margin-bottom: 35px;
+}
+.sc-graphics .graphic__img {
+  padding: 50px 50px;
 }
 .sc-graphics .graphic__img img {
   max-width: 100%;
@@ -605,9 +612,99 @@ a {
   background: rgba(222, 223, 223, 0.367);
 }
 
-@media (max-width: 1540px) {
+@media (max-width: 1200px) {
   .sc-graphics .swiperGraphics .swiper-slide {
     padding-top: 35px;
     padding-bottom: 35px;
+  }
+  .sc-graphics .graphic__container:before {
+    max-width: 81%;
+  }
+  .sc-graphics .graphic__map-btns {
+    margin-right: 0;
+  }
+}
+@media (max-width: 992px) {
+  .sc-graphics .swiper-pagination-tab-wrapper {
+    width: calc(100% + 64px);
+    margin-left: -32px;
+    padding-left: 32px;
+    border-top: none;
+    /* For Firefox */
+  }
+  .sc-graphics .swiper-pagination-tab-wrapper::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+  }
+  .sc-graphics .swiper-pagination-tab-wrapper {
+    scrollbar-width: none; /* Hides the scrollbar */
+  }
+  .sc-graphics .graphic__map-btns {
+    font-size: 12px;
+  }
+  .sc-graphics .graphic__map-btns a {
+    padding: 11px 13px;
+  }
+}
+@media (max-width: 767px) {
+  .sc-graphics {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .sc-graphics .graphic__container {
+    padding-right: 47px;
+    padding-left: 34px;
+    margin-bottom: 34px;
+  }
+  .sc-graphics .graphic__container:before {
+    right: 11px;
+    width: calc(100% - 85px);
+  }
+  .sc-graphics .graphic__bar-details {
+    margin-right: -20px;
+  }
+  .sc-graphics .graphic__map-btns {
+    margin-right: -20px;
+  }
+  .sc-graphics .graphic__map {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .sc-graphics .graphic__img {
+    padding: 24px 24px;
+  }
+  .sc-graphics .graphic__bar-details {
+    margin-top: -17px;
+    font-size: 12px;
+    min-width: 60px;
+    padding: 7px 7px;
+    margin-bottom: 23px;
+  }
+  .sc-graphics .graphic__bar-item {
+    margin-bottom: 6px;
+  }
+  .sc-graphics .graphic__bar-item span {
+    width: 9px;
+    height: 9px;
+    margin-right: 4.5px;
+  }
+}
+@media (max-width: 576px) {
+  .sc-graphics .swiper-pagination-tab-wrapper {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding-left: 20px;
+  }
+  .sc-graphics .graphic__container:before {
+    height: calc(100% - 13px);
+  }
+  .sc-graphics .graphic__map {
+    margin-bottom: 16px;
+  }
+  .sc-graphics .graphic__map-btns {
+    font-size: 9px;
+    padding: 3px 3px;
+  }
+  .sc-graphics .graphic__map-btns a {
+    padding: 5px 10px;
   }
 }/*# sourceMappingURL=main.css.map */

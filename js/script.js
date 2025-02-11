@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         loop: true,
                         speed: 1000,
                 }); 
-                const paginationBullets = swiperGraphics.querySelectorAll('.swiper-pagination-tab');
+                const paginationBullets = document.querySelectorAll('.swiper-pagination-tab');
                 if(paginationBullets){
                         paginationBullets.forEach((bullet) => {
                                 bullet.addEventListener('click', function() {
