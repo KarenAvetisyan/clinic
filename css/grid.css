@@ -395,51 +395,119 @@ svg {
     .order-xl-2{order: 2;}
 }
 
-
-/* aligns  */
-.align-end, .align-start, .align-center, .align-md-end, .align-md-start, .align-md-center, .align-lg-end, .align-lg-start, .align-lg-center, .align-xl-end, .align-xl-start, .align-xl-center{
-  flex-wrap: wrap;
+/* flex  */
+.d-flex{
   display: flex;
+  width: 100%;
 }
-.align-end{
+.flex-wrap{
+  flex-wrap: wrap;
+}
+@media (min-width: 768px)  {
+  .d-md-flex{
+    display: flex;
+    width: 100%;
+  }
+}
+@media (min-width: 992px)  {
+  .d-lg-flex{
+    display: flex;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .d-xl-flex{
+    display: flex;
+    width: 100%;
+  }
+}
+/* align items */
+.align-items-end{
   align-items: flex-end;
 }
-.align-start{
+.align-items-start{
   align-items: flex-start;
 }
-.align-center{
+.align-items-center{
   align-items: center;
 }
 @media (min-width: 768px) {
-  .align-md-end{
+ 
+  .align-items-md-end{
     align-items: flex-end;
   }
-  .align-md-start{
+  .align-items-md-start{
     align-items: flex-start;
   }
-  .align-md-center{
+  .align-items-md-center{
     align-items: center;
   }
 }
 @media (min-width: 992px) {
-  .align-lg-end{
+
+  .align-items-lg-end{
     align-items: flex-end;
   }
-  .align-lg-start{
+  .align-items-lg-start{
     align-items: flex-start;
   }
-  .align-lg-center{
+  .align-items-lg-center{
     align-items: center;
   }
 }
 @media (min-width: 1200px) {
-   .align-xl-end{
+ 
+   .align-items-xl-end{
     align-items: flex-end;
   }
-  .align-xl-start{
+  .align-items-xl-start{
     align-items: flex-start;
   }
-  .align-xl-center{
+  .align-items-xl-center{
     align-items: center;
+  }
+}
+
+/* self aligns */
+.align-self-end{
+  align-self: flex-end;
+}
+.align-self-start{
+  align-self: flex-start;
+}
+.align-self-center{
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .align-self-md-end{
+    align-self: flex-end;
+  }
+  .align-self-md-start{
+    align-self: flex-start;
+  }
+  .align-self-md-center{
+    align-self: center;
+  }
+}
+@media (min-width: 992px) {
+  .align-self-lg-end{
+    align-self: flex-end;
+  }
+  .align-self-lg-start{
+    align-self: flex-start;
+  }
+  .align-self-lg-center{
+    align-self: center;
+  }
+}
+@media (min-width: 1200px) {
+   .align-self-xl-end{
+    align-self: flex-end;
+  }
+  .align-self-xl-start{
+    align-self: flex-start;
+  }
+  .align-self-xl-center{
+    align-self: center;
   }
 }

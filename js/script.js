@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
         onscroll(window, headerScrolled)
         }
         // слайдер в первом блоке 
-        var swiperServices = select('.swiperServices');
+        const swiperServices = select('.swiperServices');
         if(swiperServices){
                 new Swiper(swiperServices, {
                 slidesPerView: 'auto',
@@ -80,23 +80,23 @@ document.addEventListener('DOMContentLoaded', function(){
         });
         }
         // слайдер графики
-        var swiperGraphics = document.querySelector('.swiperGraphics');
+        const swiperGraphics = document.querySelector('.swiperGraphics');
         if(swiperGraphics){
-                var swiper = new Swiper(swiperGraphics, {
+                var swiperGraph = new Swiper(swiperGraphics, {
                         loop: true,
                         speed: 1000,
                 }); 
-                const paginationBullets = document.querySelectorAll('.swiper-pagination-tab');
+                const paginationBullets = document.querySelectorAll('.js-graph-tab');
                 if(paginationBullets){
                         paginationBullets.forEach((bullet) => {
                                 bullet.addEventListener('click', function() {
                                         const slideIndex = parseInt(bullet.getAttribute('data-slide'));
-                                        swiper.slideTo(slideIndex);
+                                        swiperGraph.slideTo(slideIndex);
                                 });
                         });
                 }
-                swiper.on('slideChange', function() {
-                        const currentIndex = swiper.realIndex;
+                swiperGraph.on('slideChange', function() {
+                        const currentIndex = swiperGraph.realIndex;
                         paginationBullets.forEach((bullet, index) => {
                           if (index === currentIndex) {
                             bullet.classList.add('active');
@@ -142,27 +142,69 @@ document.addEventListener('DOMContentLoaded', function(){
         window.addEventListener('load', navbarlinksActive)
         onscroll(document, navbarlinksActive)
 
-        // // observer, анимация на скролле 
-        // const inViewport = (element, observer) => {
-        // element.forEach(entry => {
-        //         entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
-        //         element.forEach(item => {
-        //         if(item.target.classList.contains('is-inViewport') && !item.target.classList.contains('watched')){
-        //         item.target.classList.add("watched");
-        //         }
-        //         })
-        // });
-        // };
-        // let ioConfiguration = {
-        // rootMargin: '0% 0% 0% 0%',
-        // threshold: 0.2
-        // };
-        // const Obs = new IntersectionObserver(inViewport, ioConfiguration);
-        // const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
-        // const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
-        // ELs_inViewport.forEach(EL => {
-        // Obs.observe(EL, obsOptions);
-        // });
+        // слайдер Калькулятор и Форма заявки
+        const swiperCalculatorForm = document.querySelector('.swiperCalculatorForm');
+        if(swiperCalculatorForm){
+                var swiperCalc = new Swiper(swiperCalculatorForm, {
+                        loop: false,
+                        speed: 1000,
+                        spaceBetween: 10,
+                }); 
+                const paginationCalcBullets = document.querySelectorAll('.js-calc-tab');
+                if(paginationCalcBullets){
+                        paginationCalcBullets.forEach((bullet) => {
+                                bullet.addEventListener('click', function() {
+                                        const slideIndex = parseInt(bullet.getAttribute('data-slide'));
+                                        swiperCalc.slideTo(slideIndex);
+                                });
+                        });
+                }
+                swiperCalc.on('slideChange', function() {
+                        const currentIndex = swiperCalc.realIndex;
+                        paginationCalcBullets.forEach((bullet, index) => {
+                          if (index === currentIndex) {
+                            bullet.classList.add('active');
+                          } else {
+                            bullet.classList.remove('active');
+                          }
+                        });
+                });
+        }
 
+        // слайди радио кнопок 
+        const radios = document.querySelectorAll('.installments__wrap input[name="installment-month"]');
+        const slider = document.querySelector('.installments__wrap .slider');
+        function updateSlider() {
+        const selectedRadio = document.querySelector('.installments__wrap input[name="installment-month"]:checked');
+        if (!selectedRadio) return;
+        const selectedLabel = selectedRadio.closest('.installments__wrap .installment__label');
+        const labelLeft = selectedLabel.offsetLeft;
+        const labels = document.querySelectorAll('.installments__wrap .installment__label'); // Get all labels
+        const numOfLabels = labels.length; 
+        slider.className = 'i_slider'; 
+        slider.classList.add(`one_${numOfLabels}`);
+        slider.style.transform = `translateX(${labelLeft}px)`;
+        }
+        radios.forEach(radio => {
+        radio.addEventListener('change', updateSlider);
+        });
+        updateSlider();
+
+        // Пользователей 
+        document.addEventListener('click', function(e) {
+                if (e.target.matches('.js-increase')) {
+                    const inputField = e.target.closest('.js-form-qnt').querySelector('.js-count');
+                    inputField.value = parseInt(inputField.value) + 1;
+                } 
+                else if (e.target.matches('.js-decrease')) {
+                    const inputField = e.target.closest('.js-form-qnt').querySelector('.js-count');
+                    let newValue = parseInt(inputField.value) - 1;
+                    if (newValue < 1) {
+                        newValue = 1;
+                    }
+                    inputField.value = newValue;
+                }
+        });
+       
 })
 
