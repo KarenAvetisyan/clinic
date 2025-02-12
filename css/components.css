@@ -99,8 +99,9 @@ transform: rotate(45deg);
 /* contacts  */
 .contact__item-comp {
 font-weight: 400;
-font-size: 20px;
+font-size: 18px;
 max-width: 185px;
+width: 100%;
 }
 .contact__item-comp .contact__list {
 padding-left: 0;
@@ -111,10 +112,13 @@ margin-bottom: 0;
 width: 100%;
 transition: 0.3s ease;
 position: relative;
+margin-bottom: 12px;
 }
 .contact__item-comp .contact__list-item.hover-arrow {
 border-bottom: solid 1px transparent;
 padding-right: 20px;
+padding-bottom: 12px;
+margin-bottom: 0;
 }
 .contact__item-comp .contact__list-item.hover-arrow:hover {
 border-color: var(--black);
@@ -123,10 +127,12 @@ border-color: var(--black);
 opacity: 1;
 }
 .contact__item-comp .contact__list-item a {
-padding-top: 12.5px;
-padding-bottom: 11.5px;
+padding-top: 12px;
 width: 100%;
 display: inline-block;
+}
+.contact__item-comp .contact__list-item:last-of-type{
+  margin-bottom: 0;
 }
 .contact__item-comp .contact__list-item a:hover {
 color: var(--black);
@@ -135,7 +141,7 @@ color: var(--black);
 margin-left: auto;
 opacity: 0;
 position: absolute;
-bottom: 17px;
+bottom: 12px;
 right: 0;
 transition: 0.3s ease;
 }
@@ -143,9 +149,6 @@ transition: 0.3s ease;
     .contact__item-comp {
         font-size: 16px;
         max-width: 100%;
-    }
-    .contact__item-comp a{
-        padding-top: 11.5px;
     }
 }
 
@@ -155,7 +158,7 @@ transition: 0.3s ease;
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
-border-bottom: solid 1px rgb(228, 229, 229);
+    border-bottom: solid 1px rgb(228, 229, 229);
 
 }
 .custom__info-wrap h3{
@@ -191,6 +194,12 @@ margin-bottom: 10px;
 	height: 100%;
     opacity: 0.3;
     overflow: hidden;
+}
+@media (min-width: 576px) {
+  .particle-network-animation{
+    width: calc(100% + 24px);
+    left: -12px;
+  }
 }
 .glow {
   z-index: -1;
