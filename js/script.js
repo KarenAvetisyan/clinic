@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let selectHeader = select('.header')
         if (selectHeader) {
         const headerScrolled = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 40) {
                 selectHeader.classList.add('scrolling')
         } else {
                 selectHeader.classList.remove('scrolling')
