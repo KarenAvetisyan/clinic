@@ -878,6 +878,11 @@ a {
     margin-top: 20px;
     max-width: 100%;
   }
+  .sc-price .calculator__wrap-col {
+    max-width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+  }
   .sc-price .form-part-bottom {
     padding-top: 24px;
     padding-bottom: 0px;

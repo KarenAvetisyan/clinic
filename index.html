@@ -633,7 +633,7 @@
                                                             <div class="form-group-label">Пользователей</div>
                                                             <div class="form-group-qnt-btns js-form-qnt">
                                                                 <button type="button" class="js-decrease qnt-btn">-</button>
-                                                                <input type="text" value="1" class="js-count count" readonly="">
+                                                                <input type="text" data-target="point_users" data-each-user-price="2000" value="1" class="js-count count" readonly=""><!-- each user price is 2000 -->
                                                                 <button type="button" class="js-increase qnt-btn">+</button>
                                                             </div>
                                                         </div>
@@ -641,15 +641,15 @@
                                                             <div class="form-group-label">Поддержка?</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="podderjka" checked>
-                                                                    <span>Ухудшанная</span>
+                                                                    <input type="radio" name="support" data-target="point_support" data-text-value="Нет" data-value="0" checked>
+                                                                    <span>Нет</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="podderjka">
+                                                                    <input type="radio" name="support" data-target="point_support" data-text-value="Стандарт" data-value="3000">
                                                                     <span>Стандарт</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="podderjka">
+                                                                    <input type="radio" name="support" data-target="point_support" data-text-value="Улучшенная" data-value="9000">
                                                                     <span>Улучшенная</span>
                                                                 </label>
                                                             </div>
@@ -658,47 +658,64 @@
                                                             <div class="form-group-label">Месяцев?</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="mesecev" checked>
+                                                                    <input type="radio" name="months" data-target="point_months" data-text-value="3" data-value="3" checked>
                                                                     <span>3</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="mesecev">
+                                                                    <input type="radio" name="months" data-target="point_months" data-text-value="6" data-value="6">
                                                                     <span>6</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="mesecev">
+                                                                    <input type="radio" name="months" data-target="point_months" data-text-value="9" data-value="9">
                                                                     <span>9</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="mesecev">
+                                                                    <input type="radio" name="months" data-target="point_months" data-text-value="12" data-value="12">
                                                                     <span>12</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="mesecev">
+                                                                    <input type="radio" name="months" data-target="point_months" data-text-value="18" data-value="18">
                                                                     <span>18</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="mesecev">
+                                                                    <input type="radio" name="months" data-target="point_months" data-text-value="24" data-value="24">
                                                                     <span>24</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="form-group-label">Обучение и настройка</div>
+                                                            <div class="form-group-radio-btns">
+                                                                <label class="input-label">
+                                                                    <input type="radio" name="obuchenie" data-target="point_obuchenie" data-text-value="Нет" data-value="0" checked>
+                                                                    <span>Нет</span>
+                                                                </label>
+                                                                <label class="input-label">
+                                                                    <input type="radio" name="obuchenie" data-target="point_obuchenie" data-text-value="Базовый" data-value="7500">
+                                                                    <span>Базовый</span>
+                                                                </label>
+                                                                <label class="input-label">
+                                                                    <input type="radio" name="obuchenie" data-target="point_obuchenie" data-text-value="Расширенный" data-value="15000">
+                                                                    <span>Расширенный</span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="calculator__wrap-col">
                                                         <div class="form-group">
-                                                            <div class="form-group-label">Обучение и настройка</div>
+                                                            <div class="form-group-label">IPT*</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="tariff" checked>
+                                                                    <input type="radio" name="ipt" data-target="point_ipt" data-text-value="Нет" data-value="0" checked>
                                                                     <span>Нет</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="tariff">
-                                                                    <span>Базовый</span>
+                                                                    <input type="radio" name="ipt" data-target="point_ipt" data-text-value="MANGO" data-value="0">
+                                                                    <span>MANGO</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="tariff">
-                                                                    <span>Расширенный</span>
+                                                                    <input type="radio" name="ipt" data-target="point_ipt" data-text-value="UIS" data-value="0">
+                                                                    <span>UIS</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -706,16 +723,16 @@
                                                             <div class="form-group-label">Контрольно кассовая техника*</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="cashRegister" checked>
+                                                                    <input type="radio" name="kkt" data-target="point_kkt" data-text-value="Нет" data-value="0" checked>
                                                                     <span>Нет</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="cashRegister">
-                                                                    <span>MANGO</span>
+                                                                    <input type="radio" name="kkt" data-target="point_kkt" data-text-value="ATOL" data-value="0">
+                                                                    <span>ATOL</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="cashRegister">
-                                                                    <span>UIS</span>
+                                                                    <input type="radio" name="kkt" data-target="point_kkt" data-text-value="KOMTET" data-value="0">
+                                                                    <span>KOMTET</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -723,11 +740,11 @@
                                                             <div class="form-group-label">ЕГИСЗ*</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="egis" checked>
+                                                                    <input type="radio" name="egis3" data-target="point_egis3" data-text-value="Нет" data-value="0" checked>
                                                                     <span>Нет</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="egis">
+                                                                    <input type="radio" name="egis3" data-target="point_egis3" data-text-value="Есть" data-value="0">
                                                                     <span>Есть</span>
                                                                 </label>
                                                             </div>
@@ -737,10 +754,13 @@
                                             </div>
                                             <div class="swiper-slide">
                                                 <form action="" class="_form">
-                                                    <input type="hidden" name="users" value="" data-name="Пользователей">
+                                                    <!-- <input type="hidden" name="users" value="" data-name="Пользователей">
                                                     <input type="hidden" name="support" value="" data-name="Поддержка?">
                                                     <input type="hidden" name="months" value="" data-name="Месяцев?">
-                                                    <input type="hidden" name="study" value="" data-name="Обучение и настройка">
+                                                    <input type="hidden" name="obuchenie" value="" data-name="Обучение и настройка">
+                                                    <input type="hidden" name="ipt" value="" data-name="IPT">
+                                                    <input type="hidden" name="kkt" value="" data-name="Контрольно кассовая техника">
+                                                    <input type="hidden" name="egis3" value="" data-name="ЕГИСЗ"> -->
                                                     <div class="form__wrap">
                                                         <div class="form__wrap-col">
                                                             <div class="form-group">
@@ -790,37 +810,45 @@
                                 <div class="col-xl-4 col-md-6">
                                     <div class="price__box">
                                         <table class="price__table">
-                                            <tr>
+                                            <tr data-target-point="point_users">
                                                 <td>Количество пользователей</td>
-                                                <td>x <span class="js-table-qnt">1</span></td>
-                                                <td>14000р</td>
+                                                <td>x<span data-point-text-value></span></td>
+                                                <td><span data-point-value></span>р</td>
                                             </tr>
-                                            <tr>
+                                            <tr data-target-point="point_support">
                                                 <td>Поддержка?</td>
-                                                <td><span class="js-table-podderjka">Улучшенная</span></td>
-                                                <td>14000р</td>
+                                                <td><span data-point-text-value></span></td>
+                                                <td><span data-point-value></span>р</td>
                                             </tr>
-                                            <tr>
+                                            <tr data-target-point="point_months">
                                                 <td>Количество месяцев</td>
-                                                <td>x <span class="js-table-months">24</span></td>
-                                                <td>14000р</td>
+                                                <td data-point-text-value></td>
+                                                <td>x<span data-point-value></span></td>
                                             </tr>
-                                            <tr>
+                                            <tr data-target-point="point_obuchenie">
                                                 <td>Обучение и настройка</td>
-                                                <td><span class="js-table-study">Базовый</span></td>
-                                                <td>14000р</td>
+                                                <td><span data-point-text-value></span></td>
+                                                <td><span data-point-value></span>р</td>
                                             </tr>
-                                            <tr>
+                                            <tr data-target-point="point_ipt">
+                                                <td>IPT</td>
+                                                <td><span data-point-text-value></span></td>
+                                                <td><span data-point-value></span>р</td>
+                                            </tr>
+                                            <tr data-target-point="point_kkt">
                                                 <td>Контрольно кассовая техника*</td>
-                                                <td><span class="js-table-cashRegster">MANGO</span></td>
-                                                <td>14000р</td>
+                                                <td><span data-point-text-value></span></td>
+                                                <td><span data-point-value></span>р</td>
+                                            </tr>
+                                            <tr data-target-point="point_egis3">
+                                                <td>ЕГИСЗ*</td>
+                                                <td><span data-point-text-value></span></td>
+                                                <td><span data-point-value></span>р</td>
                                             </tr>
                                             <tr>
                                                 <td><span class="result__text">Итого:</span></td>
                                                 <td></td>
-                                                <td>
-                                                    <span class="result__currency">$</span><span class="result__price" id="resultPrice">1796.30</span>
-                                                </td>
+                                                <td><span class="result__price" id="resultPrice">1796.30</span><span class="result__currency">₽</span></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -955,159 +983,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/particalNetworkAnimation.js" async></script>
     <script src="js/script.js"></script>
+    <script src="js/calculator.js"></script>
     <script src="js/form-send.js"></script>
-    <!-- <script>
-            const canvas = document.getElementById("canvas");
-        const ctx = canvas.getContext("2d");
-
-        // Set canvas size
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Number of particles and globe radius
-        const numParticles = 90; // More particles for a fuller globe
-        const radius = 150; // Globe radius
-        const particles = [];
-
-        // Rotation angles for the globe
-        let rotationX = 0;
-        let rotationY = 0;
-
-        // Particle class
-        class Particle {
-        constructor(x, y, z, isOval) {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            this.size = Math.random() * 2 + 2;
-            this.isOval = isOval; // Flag to determine if the particle should be oval
-            this.angleSpeedX = (Math.random() - 0.5) * 0.05;
-            this.angleSpeedY = (Math.random() - 0.5) * 0.05;
-            this.driftSpeed = Math.random() * 0.02 - 0.01; // Drift speed for random motion
-        }
-
-        update() {
-            // Apply smooth drift to the particle, moving it slowly around the globe
-            const driftX = Math.cos(this.angleSpeedX) * this.driftSpeed;
-            const driftY = Math.sin(this.angleSpeedY) * this.driftSpeed;
-
-            // Update particle position with the drift
-            this.x += driftX;
-            this.y += driftY;
-
-            // Constrain particle to stay on the sphere
-            const length = Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
-            this.x = (this.x / length) * radius;
-            this.y = (this.y / length) * radius;
-            this.z = (this.z / length) * radius;
-
-            // Simulate rotation for globe (rotating around X and Y axes)
-            const cosX = Math.cos(rotationX);
-            const sinX = Math.sin(rotationX);
-            const cosY = Math.cos(rotationY);
-            const sinY = Math.sin(rotationY);
-
-            // Rotate around X axis (latitudinal movement)
-            const y = this.y * cosX - this.z * sinX;
-            const z = this.y * sinX + this.z * cosX;
-            this.y = y;
-            this.z = z;
-
-            // Rotate around Y axis (longitudinal movement)
-            const x = this.x * cosY - this.z * sinY;
-            this.z = this.x * sinY + this.z * cosY;
-            this.x = x;
-        }
-
-        draw() {
-            const scale = 500 / (500 + this.z); // 3D effect
-            const x2d = this.x * scale + canvas.width / 2;
-            const y2d = this.y * scale + canvas.height / 2;
-
-            // Draw the particle with a border
-            ctx.beginPath();
-            if (this.isOval) {
-            ctx.ellipse(x2d, y2d, this.size * 1.5, this.size, 0, 0, Math.PI * 2); // Oval shape
-            } else {
-            ctx.arc(x2d, y2d, this.size, 0, Math.PI * 2); // Circular shape
-            }
-            ctx.fillStyle = "white";
-            ctx.fill();
-            ctx.lineWidth = 1; // Border width
-            ctx.strokeStyle = "black"; // Border color
-            ctx.stroke(); // Add border around particle
-        }
-        }
-
-        // Create particles on the globe
-        function createParticles() {
-        for (let i = 0; i < numParticles; i++) {
-            const phi = Math.random() * Math.PI; // Azimuthal angle (latitude)
-            const theta = Math.random() * 2 * Math.PI; // Polar angle (longitude)
-
-            const x = radius * Math.sin(phi) * Math.cos(theta);
-            const y = radius * Math.sin(phi) * Math.sin(theta);
-            const z = radius * Math.cos(phi);
-
-            const isOval = Math.random() > 0.7; // Randomly assign some particles to have oval borders
-            particles.push(new Particle(x, y, z, isOval));
-        }
-        }
-
-        // Connect particles by distance to form the network
-        function connectParticles() {
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const dz = particles[i].z - particles[j].z;
-            const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
-
-            // Only draw line if particles are close enough
-            if (distance < 100) {
-                const scale1 = 500 / (500 + particles[i].z);
-                const scale2 = 500 / (500 + particles[j].z);
-                const x1 = particles[i].x * scale1 + canvas.width / 2;
-                const y1 = particles[i].y * scale1 + canvas.height / 2;
-                const x2 = particles[j].x * scale2 + canvas.width / 2;
-                const y2 = particles[j].y * scale2 + canvas.height / 2;
-
-                // Draw the connection line between particles
-                ctx.beginPath();
-                ctx.moveTo(x1, y1);
-                ctx.lineTo(x2, y2);
-                ctx.strokeStyle = "white";
-                ctx.lineWidth = 0.5;
-                ctx.stroke();
-            }
-            }
-        }
-        }
-
-        // Animate the particles
-        function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Update and draw all particles
-        for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
-            particles[i].draw();
-        }
-
-        // Connect particles to form the network
-        connectParticles();
-
-        // Update rotation angles for very slow rotation
-        rotationX += 0.000001; // Ultra-slow rotation on X-axis
-        rotationY += 0.000001; // Ultra-slow rotation on Y-axis
-
-        requestAnimationFrame(animate);
-        }
-
-        // Initialize particles on the sphere and start animation
-        createParticles();
-        animate();
-        </script>  -->
 </body>
 </html>
 

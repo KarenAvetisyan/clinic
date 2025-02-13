@@ -237,11 +237,10 @@ margin-bottom: 10px;
 }
 .form-group-radio-btns {
   display: flex;
-  width: fit-content;
   align-items: center;
   justify-content: space-between;
   min-height: 45px;
-  background-color: #F2F3F3;
+  background-color: #fff;
   border: solid 1px #cbcaca;
   border-radius: 3px;
   padding: 5px 5px;
@@ -273,11 +272,10 @@ margin-bottom: 10px;
   align-items: center;
   justify-content: space-between;
   height: 45px;
-  background-color: #F2F3F3;
+  background-color: #fff;
   border: solid 1px #cbcaca;
   border-radius: 3px;
   padding: 5px 5px;
-  max-width: 217px;
 }
 .form-group-qnt-btns .qnt-btn {
   width: 48px;

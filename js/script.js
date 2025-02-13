@@ -190,20 +190,20 @@ document.addEventListener('DOMContentLoaded', function(){
         })
 
         // Пользователей +/-
-        document.addEventListener('click', function(e) {
-                if (e.target.matches('.js-increase')) {
-                    const inputField = e.target.closest('.js-form-qnt').querySelector('.js-count');
-                    inputField.value = parseInt(inputField.value) + 1;
-                } 
-                else if (e.target.matches('.js-decrease')) {
-                    const inputField = e.target.closest('.js-form-qnt').querySelector('.js-count');
-                    let newValue = parseInt(inputField.value) - 1;
-                    if (newValue < 1) {
-                        newValue = 1;
-                    }
-                    inputField.value = newValue;
-                }
-        });
+        // document.addEventListener('click', function(e) {
+        //         if (e.target.matches('.js-increase')) {
+        //             const inputField = e.target.closest('.js-form-qnt').querySelector('.js-count');
+        //             inputField.value = parseInt(inputField.value) + 1;
+        //         } 
+        //         else if (e.target.matches('.js-decrease')) {
+        //             const inputField = e.target.closest('.js-form-qnt').querySelector('.js-count');
+        //             let newValue = parseInt(inputField.value) - 1;
+        //             if (newValue < 1) {
+        //                 newValue = 1;
+        //             }
+        //             inputField.value = newValue;
+        //         }
+        // });
         
        
 })
