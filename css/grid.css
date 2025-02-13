@@ -135,7 +135,7 @@ svg {
     padding-left: 20px;
     padding-right: 20px;
 }
-section {
+section, footer {
     display: block;
     width: 100%;
 }

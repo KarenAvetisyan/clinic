@@ -612,23 +612,23 @@
         <div class="frame frame-5 padding-y" id="_frame_5">
             <div class='particle-network-animation'></div>
             <section class="sc-price">
-                <div class="container form__container">
+                <div class="container h_100">
                     <div class="d-max-768">
                         <h2>Стоимость</h2>
                     </div>
-                    <form class="form__wrapper d-md-flex flex-wrap">
+                    <div class="h_100 d-md-flex flex-wrap">
                         <div class="form-part-top align-self-md-start">
                             <div class="swiper-pagination-tab-wrapper">
                                 <span class="swiper-pagination-tab js-calc-tab active" data-slide="0">Калькулятор</span>
-                                <span class="swiper-pagination-tab js-calc-tab" data-slide="1">Форма заявки</span>
+                                <span class="swiper-pagination-tab js-calc-tab js-form-slide" data-slide="1">Форма заявки</span>
                             </div>
                             <div class="row">
-                                <div class="col-lg-8">
+                                <div class="col-xl-8 col-md-6">
                                     <div class="swiper swiperCalculatorForm">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <div class="form__group-wrap">
-                                                    <div class="form__group-wrap-col">
+                                                <div class="calculator__wrap">
+                                                    <div class="calculator__wrap-col">
                                                         <div class="form-group">
                                                             <div class="form-group-label">Пользователей</div>
                                                             <div class="form-group-qnt-btns js-form-qnt">
@@ -641,15 +641,15 @@
                                                             <div class="form-group-label">Поддержка?</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="support">
+                                                                    <input type="radio" name="podderjka" checked>
                                                                     <span>Ухудшанная</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="support">
+                                                                    <input type="radio" name="podderjka">
                                                                     <span>Стандарт</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="support" checked>
+                                                                    <input type="radio" name="podderjka">
                                                                     <span>Улучшенная</span>
                                                                 </label>
                                                             </div>
@@ -658,46 +658,46 @@
                                                             <div class="form-group-label">Месяцев?</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="months">
+                                                                    <input type="radio" name="mesecev" checked>
                                                                     <span>3</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="months">
+                                                                    <input type="radio" name="mesecev">
                                                                     <span>6</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="months" checked>
+                                                                    <input type="radio" name="mesecev">
                                                                     <span>9</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="months" checked>
+                                                                    <input type="radio" name="mesecev">
                                                                     <span>12</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="months" checked>
+                                                                    <input type="radio" name="mesecev">
                                                                     <span>18</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="months" checked>
+                                                                    <input type="radio" name="mesecev">
                                                                     <span>24</span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form__group-wrap-col">
+                                                    <div class="calculator__wrap-col">
                                                         <div class="form-group">
                                                             <div class="form-group-label">Обучение и настройка</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="study">
+                                                                    <input type="radio" name="tariff" checked>
                                                                     <span>Нет</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="study">
+                                                                    <input type="radio" name="tariff">
                                                                     <span>Базовый</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="study" checked>
+                                                                    <input type="radio" name="tariff">
                                                                     <span>Расширенный</span>
                                                                 </label>
                                                             </div>
@@ -706,11 +706,11 @@
                                                             <div class="form-group-label">Контрольно кассовая техника*</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="cashRegister">
+                                                                    <input type="radio" name="cashRegister" checked>
                                                                     <span>Нет</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="cashRegister" checked>
+                                                                    <input type="radio" name="cashRegister">
                                                                     <span>MANGO</span>
                                                                 </label>
                                                                 <label class="input-label">
@@ -723,11 +723,11 @@
                                                             <div class="form-group-label">ЕГИСЗ*</div>
                                                             <div class="form-group-radio-btns">
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="egis">
+                                                                    <input type="radio" name="egis" checked>
                                                                     <span>Нет</span>
                                                                 </label>
                                                                 <label class="input-label">
-                                                                    <input type="radio" name="egis" checked>
+                                                                    <input type="radio" name="egis">
                                                                     <span>Есть</span>
                                                                 </label>
                                                             </div>
@@ -736,72 +736,83 @@
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="form__field-group-wrap">
-                                                    <div class="form__field-group-wrap-col">
-                                                        <div class="form-group">
-                                                            <div class="form-group-label">Название организации</div>
-                                                            <div class="form-field">
-                                                                <input type="text" placeholder="Введите название">
+                                                <form action="" class="_form">
+                                                    <input type="hidden" name="users" value="" data-name="Пользователей">
+                                                    <input type="hidden" name="support" value="" data-name="Поддержка?">
+                                                    <input type="hidden" name="months" value="" data-name="Месяцев?">
+                                                    <input type="hidden" name="study" value="" data-name="Обучение и настройка">
+                                                    <div class="form__wrap">
+                                                        <div class="form__wrap-col">
+                                                            <div class="form-group">
+                                                                <div class="form-group-label">Название организации</div>
+                                                                <div class="form-field">
+                                                                    <input type="text" class="form__input" placeholder="Введите название">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="form-group-label">ФИО контактного лица</div>
+                                                                <div class="form-field">
+                                                                    <input type="text" class="form__input _req" placeholder="ФИО контактного лица">
+                                                                       <div class="req__text">Обязательное поле</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="form-group-label">Телефон</div>
+                                                                <div class="form-field">
+                                                                    <input type="text" class="form__input _req _phone phone-mask" placeholder="+7 999 999 99 99">
+                                                                       <div class="req__text">Обязательное поле</div>
+                                                                       <div class="error__text">Пожалуйста, укажите корректный номер</div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <div class="form-group-label">ФИО контактного лица</div>
-                                                            <div class="form-field">
-                                                                <input type="text" placeholder="ФИО контактного лица">
+                                                        <div class="form__wrap-col">
+                                                            <div class="form-group">
+                                                                <div class="form-group-label">Email</div>
+                                                                <div class="form-field">
+                                                                    <input type="text" class="form__input _req _email" placeholder="Введите адрес вашей электронной почты">
+                                                                       <div class="req__text">Обязательное поле</div>
+                                                                       <div class="error__text">Пожалуйста, укажите корректный e-mail</div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="form-group-label">Телефон</div>
-                                                            <div class="form-field">
-                                                                <input type="text" placeholder="+7 999 999 99 99">
+                                                            <div class="form-group">
+                                                                <div class="form-group-label">Название организации</div>
+                                                                <div class="form-field">
+                                                                    <textarea class="form__input" placeholder="Название организации"></textarea>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form__field-group-wrap-col">
-                                                        <div class="form-group">
-                                                            <div class="form-group-label">Email</div>
-                                                            <div class="form-field">
-                                                                <input type="text" placeholder="Введите адрес вашей электронной почты">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="form-group-label">Название организации</div>
-                                                            <div class="form-field">
-                                                                <textarea placeholder="Название организации"></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-xl-4 col-md-6">
                                     <div class="price__box">
                                         <table class="price__table">
                                             <tr>
                                                 <td>Количество пользователей</td>
-                                                <td>x 1</td>
+                                                <td>x <span class="js-table-qnt">1</span></td>
                                                 <td>14000р</td>
                                             </tr>
                                             <tr>
-                                                <td>Количество пользователей</td>
-                                                <td>Улучшенная</td>
+                                                <td>Поддержка?</td>
+                                                <td><span class="js-table-podderjka">Улучшенная</span></td>
                                                 <td>14000р</td>
                                             </tr>
                                             <tr>
                                                 <td>Количество месяцев</td>
-                                                <td>x 24</td>
+                                                <td>x <span class="js-table-months">24</span></td>
                                                 <td>14000р</td>
                                             </tr>
                                             <tr>
                                                 <td>Обучение и настройка</td>
-                                                <td>Базовый</td>
+                                                <td><span class="js-table-study">Базовый</span></td>
                                                 <td>14000р</td>
                                             </tr>
                                             <tr>
                                                 <td>Контрольно кассовая техника*</td>
-                                                <td>MANGO</td>
+                                                <td><span class="js-table-cashRegster">MANGO</span></td>
                                                 <td>14000р</td>
                                             </tr>
                                             <tr>
@@ -818,119 +829,133 @@
                         </div>
                         <div class="form-part-bottom align-self-md-end">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <p>* Не входит в базовую стоимость и оплачивается дополнительно по цене поставщика услуги</p>
+                                <div class="col-md-7">
+                                    <p>* Не входит в базовую стоимость и оплачивается<br> дополнительно по цене поставщика услуги</p>
                                 </div>
-                                <div class="col-md-4"></div>
-                                <div class="col-md-4">
-                                    <button type="button" class="primary-btn next-tab">Далее <i class="icon icon-btn-arrow"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            
-        </div>
-        <!-- фрейм 6 -->
-        <div class="frame frame-6 padding-y" id="_frame_6">
-            <div class='particle-network-animation'></div>
-            <section class="sc-about">
-                <div class="container about__container">
-                    <div class="row about__row d-md-flex flex-wrap">
-                        <div class="col-12 align-self-md-start">
-                            <div class="d-max-768">
-                                <h2>О нас</h2>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <div class="about__info">
-                                        <h3>Мировая команда<br> разработчиков</h3>
-                                        <p>Наша команда состоит из ведущих специалистов
-                                            в области медицинских технологий, с богатым международным опытом.
-                                             Мы обеспечиваем высочайший уровень разработки, соответствующий мировым стандартам.</p>
-                                            <div class="contact__item-comp">
-                                            <ul class="contact__list">
-                                                <li class="contact__list-item hover-arrow"><a href="#">Telegram <i class="icon icon-btn-arrow blue"></i></a></li><!--при навидении есть стрелка (класс - hover-arrow)-->
-                                                <li class="contact__list-item hover-arrow"><a href="#">WhatsApp <i class="icon icon-btn-arrow blue"></i></a></li><!--при навидении есть стрелка (класс - hover-arrow)-->
-                                                <li class="contact__list-item"><a href="#">admin@clinicup.ru</a></li>
-                                                <li class="contact__list-item"><a href="#">+7 (499) 911-00-03</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="form__field-group-wrap">
-                                        <div class="form__field-group-wrap-col">
-                                            <div class="form-group">
-                                                <div class="form-group-label">Название организации</div>
-                                                <div class="form-field">
-                                                    <input type="text" placeholder="Введите название">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group-label">ФИО контактного лица</div>
-                                                <div class="form-field">
-                                                    <input type="text" placeholder="ФИО контактного лица">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group-label">Телефон</div>
-                                                <div class="form-field">
-                                                    <input type="text" placeholder="+7 999 999 99 99">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form__field-group-wrap-col">
-                                            <div class="form-group">
-                                                <div class="form-group-label">Email</div>
-                                                <div class="form-field">
-                                                    <input type="text" placeholder="Введите адрес вашей электронной почты">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group-label">Название организации</div>
-                                                <div class="form-field">
-                                                    <textarea placeholder="Название организации"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 align-self-md-end">
-                            <div class="form-part-bottom">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <ul class="foot__nav">
-                                            <li><a href="#">Политики конфиденциальности</a></li>
-                                            <li><a href="#">Условия использования</a></li>
-                                            <li><a href="#">Акт оплаты</a></li>
-                                            <li><a href="#">Товарные знаки</a></li>
-                                            <li><a href="#">Договор</a></li>
-                                            <li><a href="#">Соглашение</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <button class="primary-btn order__btn">Отправить заявку <i class="icon icon-btn-arrow"></i></button>
-                                    </div>
+                                <div class="col-md-5">
+                                    <a href="#_frame_5" class="primary-btn form-btns js-form-next-slide scrollTo">Далее <i class="icon icon-btn-arrow"></i></a>
+                                    <button class="primary-btn form-btns js-form-submit hide">Отправить заявку <i class="icon icon-btn-arrow"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
         </div>
-        <!-- Оснавной футер (в страницах почти везде только в моб. отабражается)  -->
-        <footer class="footer">
-        </footer>
+        <!-- фрейм 6 -->
+        <div class="frame frame-6 padding-y" id="_frame_6">
+            <div class='particle-network-animation'></div>
+            <section class="sc-about align-self-md-start">
+                <div class="container about__container">
+                    <div class="row">
+                        <div class="col-12 d-max-768">
+                            <h2>О нас</h2>
+                        </div>
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about__info">
+                                <h3>Мировая команда<br> разработчиков</h3>
+                                <p>Наша команда состоит из ведущих специалистов
+                                    в области медицинских технологий, с богатым международным опытом.
+                                        Мы обеспечиваем высочайший уровень разработки, соответствующий мировым стандартам.</p>
+                                    <div class="contact__item-comp">
+                                    <ul class="contact__list">
+                                        <li class="contact__list-item hover-arrow"><a href="#">Telegram <i class="icon icon-btn-arrow blue"></i></a></li>
+                                        <li class="contact__list-item hover-arrow"><a href="#">WhatsApp <i class="icon icon-btn-arrow blue"></i></a></li>
+                                        <li class="contact__list-item"><a href="#">admin@clinicup.ru</a></li>
+                                        <li class="contact__list-item"><a href="#">+7 (499) 911-00-03</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <form action="" class="_form">
+                                <input type="hidden" name="users" value="" data-name="Пользователей">
+                                <input type="hidden" name="support" value="" data-name="Поддержка?">
+                                <input type="hidden" name="months" value="" data-name="Месяцев?">
+                                <input type="hidden" name="study" value="" data-name="Обучение и настройка">
+                                <div class="form__wrap">
+                                    <div class="form__wrap-col">
+                                        <div class="form-group">
+                                            <div class="form-group-label">Название организации</div>
+                                            <div class="form-field">
+                                                <input type="text" class="form__input" placeholder="Введите название">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group-label">ФИО контактного лица</div>
+                                            <div class="form-field">
+                                                <input type="text" class="form__input _req" placeholder="ФИО контактного лица">
+                                                    <div class="req__text">Обязательное поле</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group-label">Телефон</div>
+                                            <div class="form-field">
+                                                <input type="text" class="form__input _req _phone phone-mask" placeholder="+7 999 999 99 99">
+                                                    <div class="req__text">Обязательное поле</div>
+                                                    <div class="error__text">Пожалуйста, укажите корректный номер</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__wrap-col">
+                                        <div class="form-group">
+                                            <div class="form-group-label">Email</div>
+                                            <div class="form-field">
+                                                <input type="text" class="form__input _req _email" placeholder="Введите адрес вашей электронной почты">
+                                                    <div class="req__text">Обязательное поле</div>
+                                                    <div class="error__text">Пожалуйста, укажите корректный e-mail</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group-label">Название организации</div>
+                                            <div class="form-field">
+                                                <textarea class="form__input" placeholder="Название организации"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-max-768">
+                                    <button class="primary-btn js-form-submit order__btn">Отправить заявку <i class="icon icon-btn-arrow"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <!-- Оснавной футер будет лежать в последнем фрейме -->
+            <footer class="footer align-self-md-end">
+                <div class="footer__top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="footer__nav">
+                                    <li><a href="#">Политики конфиденциальности</a></li>
+                                    <li><a href="#">Условия использования</a></li>
+                                    <li><a href="#">Акт оплаты</a></li>
+                                    <li><a href="#">Товарные знаки</a></li>
+                                    <li><a href="#">Договор</a></li>
+                                    <li><a href="#">Соглашение</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 d-min-768">
+                                <button class="primary-btn js-form-submit order__btn">Отправить заявку <i class="icon icon-btn-arrow"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="container">
+                        <p>2024.04.04 © CLINICUP.RU Медицинская информационая система МИС</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/particalNetworkAnimation.js" async></script>
+    <script src="js/script.js"></script>
+    <script src="js/form-send.js"></script>
     <!-- <script>
             const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");

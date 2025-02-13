@@ -167,30 +167,29 @@ document.addEventListener('DOMContentLoaded', function(){
                           } else {
                             bullet.classList.remove('active');
                           }
+                          if(select(".js-form-slide").classList.contains('active')){
+                                select('.js-form-next-slide').classList.add('hide');
+                                select('.js-form-submit').classList.remove('hide');
+                          }
+                          else {
+                                select('.js-form-next-slide').classList.remove('hide');
+                                select('.js-form-submit').classList.add('hide');
+                          }
                         });
                 });
         }
 
-        // слайди радио кнопок 
-        const radios = document.querySelectorAll('.installments__wrap input[name="installment-month"]');
-        const slider = document.querySelector('.installments__wrap .slider');
-        function updateSlider() {
-        const selectedRadio = document.querySelector('.installments__wrap input[name="installment-month"]:checked');
-        if (!selectedRadio) return;
-        const selectedLabel = selectedRadio.closest('.installments__wrap .installment__label');
-        const labelLeft = selectedLabel.offsetLeft;
-        const labels = document.querySelectorAll('.installments__wrap .installment__label'); // Get all labels
-        const numOfLabels = labels.length; 
-        slider.className = 'i_slider'; 
-        slider.classList.add(`one_${numOfLabels}`);
-        slider.style.transform = `translateX(${labelLeft}px)`;
-        }
-        radios.forEach(radio => {
-        radio.addEventListener('change', updateSlider);
-        });
-        updateSlider();
+        // кнопка далее функционал 
+        document.addEventListener('click', e => {
+                if(!e.target.matches('.js-form-next-slide')){}
+                else {
+                     if(select(".js-form-slide")) {
+                        select(".js-form-slide").click();
+                     }
+                }
+        })
 
-        // Пользователей 
+        // Пользователей +/-
         document.addEventListener('click', function(e) {
                 if (e.target.matches('.js-increase')) {
                     const inputField = e.target.closest('.js-form-qnt').querySelector('.js-count');
@@ -205,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     inputField.value = newValue;
                 }
         });
+        
        
 })
 

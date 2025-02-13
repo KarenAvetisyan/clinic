@@ -211,6 +211,7 @@ margin-bottom: 10px;
   width: 100%;
   outline: none;
   height: 45px;
+  font-size: 14px;
   background-color: #F2F3F3;
   border: solid 1px #cbcaca;
   border-radius: 3px;
@@ -234,7 +235,6 @@ margin-bottom: 10px;
 .form-field textarea::placeholder {
   color: rgba(16, 15, 13, 0.2);
 }
-
 .form-group-radio-btns {
   display: flex;
   width: fit-content;
@@ -301,19 +301,37 @@ margin-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
-
-
-/* footer nav  */
-.foot__nav{
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+@media (max-width: 1200px) {
+  .form-group{
+    margin-bottom: 20px;
+  }
+  .form-group-radio-btns .input-label span{
+    padding: 8px 20px;
+  }
 }
-
-.foot__nav li{
-  display: inline-block;
-  width: 32%;
+@media (max-width: 767px) {
+  .form-field textarea{
+    height: 135px;
+  }
+}
+/* _form  */
+._form .req_error .form__input::placeholder,
+._form .error_error .form__input::placeholder,
+._form .req_error .form__textarea::placeholder,
+._form .error_error .form__textarea::placeholder {
+  color: #B00020;
+}
+._form .req_error .req__text, ._form .legal__form .req_error .req__text {
+  display: block;
+}
+._form .error_error .error__text {
+  display: block;
+}
+._form .req__text, ._form .error__text {
+  font-size: 12px;
+  color: #B00020;
+  margin-top: 5px;
+  display: none;
 }
 
 /* слайди радио кнопок */
@@ -325,6 +343,7 @@ margin-bottom: 10px;
 	height: 100%;
     opacity: 0.3;
     overflow: hidden;
+    pointer-events: none;
 }
 @media (min-width: 576px) {
   .particle-network-animation{
