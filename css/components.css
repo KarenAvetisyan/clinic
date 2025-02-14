@@ -189,6 +189,18 @@ margin-bottom: 10px;
         font-weight: 300;
     }
 }
+@media only screen and (max-width: 1200px) and (max-height: 768px) {
+  .custom__info-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .custom__info-wrap h3 {
+    font-size: 21px;
+  }
+  .custom__info-wrap p {
+    font-size: 14px;
+  }
+}
 
 /* form groups */
 .form-group {
@@ -234,6 +246,14 @@ margin-bottom: 10px;
 }
 .form-field textarea::placeholder {
   color: rgba(16, 15, 13, 0.2);
+}
+@media only screen and (max-width: 1200px) and (max-height: 768px) {
+  .form-field input{
+    height: 36px;
+  }
+  .form-field textarea{
+    height: 105px;
+  }
 }
 .form-group-radio-btns {
   display: flex;
@@ -309,6 +329,12 @@ margin-bottom: 10px;
     height: 135px;
   }
 }
+@media only screen and (max-width: 1200px) and (max-height: 768px) {
+  .form-group {
+    margin-bottom: 14px;
+  }
+}
+
 /* _form  */
 ._form .req_error .form__input::placeholder,
 ._form .error_error .form__input::placeholder,
