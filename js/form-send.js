@@ -16,6 +16,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
 
+            // async function formSubmit(e, form) {
+            //     e.preventDefault(); 
+            //     let error = formValidate(form);
+            //     if (error != 0) {
+            //         // "Form has errors";
+            //         if (window.matchMedia('(max-width: 767px)').matches) {
+            //             const firstErrorElement = form.querySelector('.req_error, .error_error');
+            //             if (firstErrorElement) {
+            //                 firstErrorElement.scrollIntoView({
+            //                     behavior: 'smooth',
+            //                     block: 'center'
+            //                 });
+            //             }
+            //         }
+                    
+            //     } else {
+            //         // "Form is valid";
+            //         form.submit(); // Submit the form
+            //     }
+            // }
             async function formSubmit(e, form) {
                 e.preventDefault(); 
                 let error = formValidate(form);
@@ -30,12 +50,50 @@ document.addEventListener('DOMContentLoaded', function () {
                             });
                         }
                     }
-                    
                 } else {
                     // "Form is valid";
-                    form.submit(); // Submit the form
+                    let formData = {};
+                    const formFields = form.querySelectorAll('input, textarea');
+                    formFields.forEach(field => {
+                        if (field.name) {
+                            formData[field.name] = field.value;
+                        }
+                    });
+            
+                    // Add additional hidden fields
+                    formData["users"] = form.querySelector('input[name="users"]').value;
+                    formData["support"] = form.querySelector('input[name="support"]').value;
+                    formData["months"] = form.querySelector('input[name="months"]').value;
+                    formData["obuchenie"] = form.querySelector('input[name="obuchenie"]').value;
+                    formData["ipt"] = form.querySelector('input[name="ipt"]').value;
+                    formData["kkt"] = form.querySelector('input[name="kkt"]').value;
+                    formData["egis3"] = form.querySelector('input[name="egis3"]').value;
+                    formData["totalPrice"] = form.querySelector('input[name="totalPrice"]').value;
+            
+                    // Send form data using XMLHttpRequest
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'YOUR_SERVER_URL', true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+            
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            if (xhr.status === 200) {
+                                // Handle success (form reset or other actions)
+                                console.log('Form submitted successfully!');
+                                form.reset();  // Optionally reset the form
+                            } else {
+                                // Handle failure (e.g., display error)
+                                console.error('Form submission failed:', xhr.statusText);
+                            }
+                        }
+                    };
+            
+                    // Send the JSON data
+                    xhr.send(JSON.stringify(formData));
                 }
             }
+            
+            
         }
     });
 
@@ -145,3 +203,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
