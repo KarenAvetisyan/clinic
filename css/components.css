@@ -211,6 +211,16 @@ margin-bottom: 10px;
   font-weight: 400;
   display: inline-block;
   width: 100%;
+  position: relative;
+}
+.form-group.req_error input, 
+.form-group.error_error input{
+  border-color: #EE4F4F;
+  padding-right: 40px;
+}
+.form-group.req_error .form-group-label,
+.form-group.error_error .form-group-label{
+  color: #EE4F4F;
 }
 .form-group input, .form-group textarea {
   font-family: "Jost";
@@ -336,13 +346,7 @@ margin-bottom: 10px;
 }
 
 /* _form  */
-._form .req_error .form__input::placeholder,
-._form .error_error .form__input::placeholder,
-._form .req_error .form__textarea::placeholder,
-._form .error_error .form__textarea::placeholder {
-  color: #B00020;
-}
-._form .req_error .req__text, ._form .legal__form .req_error .req__text {
+._form .req_error .req__text {
   display: block;
 }
 ._form .error_error .error__text {
@@ -350,12 +354,48 @@ margin-bottom: 10px;
 }
 ._form .req__text, ._form .error__text {
   font-size: 12px;
-  color: #B00020;
   margin-top: 5px;
   display: none;
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  text-align: right;
+  background-color: #EE4F4F;
+  border-radius: 4px;
+  padding: 2px 5px;
+  color: #fff;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.143);
+
+
+}
+._form .req__text:before, ._form .error__text:before{
+  content: "!";
+  position: absolute;
+  top: -37px;
+  right: 12px;
+  background-color: #EE4F4F;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+}
+._form .req__text::after, ._form .error__text::after{
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid #EE4F4F;
 }
 
-/* слайди радио кнопок */
+/* прозрачность фигур летающих  */
 .particle-network-animation {
 	position: absolute;
 	top: 0;
@@ -370,57 +410,5 @@ margin-bottom: 10px;
   .particle-network-animation{
     width: calc(100% + 24px);
     left: -12px;
-  }
-}
-.glow {
-  z-index: -1;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  background-image: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.025), transparent);
-}
-.glow-1 {
-  width: 150vw;
-  height: 150vh;
-  margin-top: -75vh;
-  margin-left: -75vw;
-  animation: glow-1-move 25s linear infinite both;
-}
-@keyframes glow-1-move {
-  from {
-    transform: translate(-100%, 100%);
-  }
-  to {
-    transform: translate(100%, -100%);
-  }
-}
-.glow-2 {
-  width: 100vw;
-  height: 100vh;
-  margin-top: -50vh;
-  margin-left: -50vw;
-  animation: glow-2-move 25s linear calc(25 / 3) infinite both;
-}
-@keyframes glow-2-move {
-  from {
-    transform: translate(-100%, 0%);
-  }
-  to {
-    transform: translate(100%, 100%);
-  }
-}
-.glow-3 {
-  width: 120vw;
-  height: 120vh;
-  margin-top: -60vh;
-  margin-left: -60vw;
-  animation: glow-3-move 25s linear calc(25 / 3) * 2 infinite both;
-}
-@keyframes glow-3-move {
-  from {
-    transform: translate(100%, 100%);
-  }
-  to {
-    transform: translate(0%, -100%);
   }
 }

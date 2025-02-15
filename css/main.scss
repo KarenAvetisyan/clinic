@@ -403,17 +403,24 @@ a{
   }
 }
 @media (max-width: 767px) {
+    .frame-1{
+      min-height: calc(100vh - 80px);
+    }
     .frame-1-bg{
         background-size: 161%;
     }
 }
 @media (max-width: 576px) {
+  
   .frame-1-bg{
     background-size: cover;
     background-position: 60% 50%;
   }
 }
 @media (max-width: 376px) {
+  .frame-1{
+    min-height: calc(100vh - 55px);
+  }
   .frame-1-bg{
     top: -55px;
   }
@@ -902,6 +909,7 @@ a{
     max-width: 360px;
     margin-right: 24px;
     padding-right: 16px;
+  
   }
   .price__box{
     max-width: 410px;
@@ -932,7 +940,7 @@ a{
     td{
       padding-top: 20px;
       padding-bottom: 20px;
-      padding-left: 20px;
+      padding-left: 10px;
       color: var(--black);
       border-bottom: solid 1px #DEDEDE;
       width: 100%;
@@ -979,12 +987,25 @@ a{
       margin-right: 0;
       max-width: 100%;
       width: calc(50% - 10px);
+      &:last-of-type{
+        &:last-of-type{
+          padding-right: 0;
+        }
+      }
     }
     .price__table{
       td{
         padding-top: 15.4px;
         padding-bottom: 15.4px;
       }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .sc-price{
+    .calculator__wrap-col{
+      width: 100%;
+      padding-right: 0;
     }
   }
 }
@@ -1025,6 +1046,15 @@ a{
        }
      }
    }
+  }
+}
+@media (max-width: 356px) {
+  .sc-price{
+    .price__table{
+      padding-left: 8px;
+      padding-right: 8px;
+      word-break: break-all;
+    }
   }
 }
 

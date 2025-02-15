@@ -139,16 +139,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function formAddReq(input) {
-        input.parentElement.classList.add('req_error');
+        input.closest('.form-group').classList.add('req_error');
     }
 
     function formAddError(input) {
-        input.parentElement.classList.add('error_error');
+        input.closest('.form-group').classList.add('error_error');
     }
 
     function formRemove_Req_Error(input) {
-        input.parentElement.classList.remove('req_error');
-        input.parentElement.classList.remove('error_error');
+        input.closest('.form-group').classList.remove('req_error');
+        input.closest('.form-group').classList.remove('error_error');
     }
 
     function emailTest(input) {
