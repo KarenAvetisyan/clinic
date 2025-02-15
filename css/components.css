@@ -265,6 +265,11 @@ margin-bottom: 10px;
     height: 105px;
   }
 }
+@media (max-width: 1200px) {
+  .form-field textarea{
+    height: 90px;
+  }
+}
 .form-group-radio-btns {
   display: flex;
   align-items: center;
